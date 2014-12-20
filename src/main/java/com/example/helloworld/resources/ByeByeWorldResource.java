@@ -11,6 +11,7 @@ import javax.ws.rs.core.MediaType;
 import com.codahale.metrics.annotation.Timed;
 import com.example.helloworld.core.Saying;
 import com.google.common.base.Optional;
+import com.google.inject.Inject;
 
 @Path("/ByeBye-World")
 @Produces(MediaType.APPLICATION_JSON)
@@ -18,6 +19,7 @@ public class ByeByeWorldResource {
     private final String defaultName;
     private final AtomicLong counter;
 
+    @Inject
     public ByeByeWorldResource(String defaultName) {
         this.defaultName = defaultName;
         this.counter = new AtomicLong();
