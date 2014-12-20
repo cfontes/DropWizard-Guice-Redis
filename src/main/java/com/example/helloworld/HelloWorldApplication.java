@@ -20,7 +20,8 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
     @Override
     public void initialize(Bootstrap<HelloWorldConfiguration> bootstrap) {
         GuiceBundle<HelloWorldConfiguration> guiceBundle =
-                GuiceBundle.<HelloWorldConfiguration>newBuilder().addModule(new HelloWorldModule())
+                GuiceBundle.<HelloWorldConfiguration>newBuilder()
+                           .addModule(new HelloWorldModule())
                            .enableAutoConfig(getClass().getPackage().getName())
                            .setConfigClass(HelloWorldConfiguration.class).build();
 

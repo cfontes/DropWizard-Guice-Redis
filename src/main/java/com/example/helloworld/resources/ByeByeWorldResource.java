@@ -12,6 +12,7 @@ import com.codahale.metrics.annotation.Timed;
 import com.example.helloworld.core.Saying;
 import com.google.common.base.Optional;
 import com.google.inject.Inject;
+import com.google.inject.name.Named;
 
 @Path("/ByeBye-World")
 @Produces(MediaType.APPLICATION_JSON)
@@ -20,7 +21,7 @@ public class ByeByeWorldResource {
     private final AtomicLong counter;
 
     @Inject
-    public ByeByeWorldResource(String defaultName) {
+    public ByeByeWorldResource(@Named("defaultName")String defaultName) {
         this.defaultName = defaultName;
         this.counter = new AtomicLong();
     }
@@ -28,7 +29,7 @@ public class ByeByeWorldResource {
     @GET
     @Timed
     public Saying sayByeBye(@QueryParam("name") Optional<String> names) {
-        final String value = String.format("Die die DIIIIIEEEE %s motafoca", names.or(defaultName));
+        final String value = String.format("Bye bye %s", names.or(defaultName));
         return new Saying(counter.incrementAndGet(), value);
     }
 }
