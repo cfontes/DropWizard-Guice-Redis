@@ -12,10 +12,12 @@ import com.codahale.metrics.annotation.Timed;
 import com.example.helloworld.core.Saying;
 import com.google.common.base.Optional;
 import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import com.google.inject.name.Named;
 
 @Path("/ByeBye-World")
 @Produces(MediaType.APPLICATION_JSON)
+@Singleton
 public class ByeByeWorldResource {
     private final String defaultName;
     private final AtomicLong counter;
