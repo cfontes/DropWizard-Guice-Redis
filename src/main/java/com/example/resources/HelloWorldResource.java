@@ -48,8 +48,8 @@ public class HelloWorldResource {
         Long counter = this.counter.incrementAndGet();
         logger.info("Saying Hello " + name.or("None..."));
         final String value = String.format(template, name.or(defaultName));
-        redisPool.append("Saying", value);
-        return new Saying(counter, redisPool.get("Saying"));
+        redisPool.sadd("Saying", value);
+        return new Saying(counter, redisPool.smembers("Saying").toString());
     }
 
 }
