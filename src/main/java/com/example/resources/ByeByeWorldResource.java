@@ -1,4 +1,4 @@
-package com.example.helloworld.resources;
+package com.example.resources;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -9,7 +9,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import com.codahale.metrics.annotation.Timed;
-import com.example.helloworld.core.Saying;
+import com.example.core.Saying;
 import com.google.common.base.Optional;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;

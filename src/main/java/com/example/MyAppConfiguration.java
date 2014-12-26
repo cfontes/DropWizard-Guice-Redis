@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.example;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;

@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.example;
 
 
 import javax.validation.constraints.Max;

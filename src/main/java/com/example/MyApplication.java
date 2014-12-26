@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.example;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;

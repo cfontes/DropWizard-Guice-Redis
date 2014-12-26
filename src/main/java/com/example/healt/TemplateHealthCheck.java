@@ -1,4 +1,4 @@
-package com.example.helloworld.healt;
+package com.example.healt;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;

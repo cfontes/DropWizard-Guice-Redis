@@ -1,4 +1,4 @@
-package com.example.helloworld.core;
+package com.example.core;
 
 import org.hibernate.validator.constraints.Length;
 
